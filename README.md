@@ -1,5 +1,5 @@
 # Project-Iron-BCC-FCC-Phase-Stability
-A Quantum ESPRESSO project to determine the relative stability of BCC and FCC iron from first principles.-bcc 
+A Quantum ESPRESSO project to determine the relative stability of BCC and FCC iron from first principles. 
 # Iron Phase Stability: A First-Principles DFT Study
 
 This project computationally demonstrates a cornerstone of physical metallurgy: **at 0 Kelvin, the Body-Centered Cubic (BCC) crystal structure of iron (ferrite) is energetically more stable than the Face-Centered Cubic (FCC) structure (austenite).**
