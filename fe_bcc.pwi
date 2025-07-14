@@ -1,0 +1,44 @@
+&CONTROL
+    calculation   = 'vc-relax'
+    restart_mode  = 'from_scratch'
+    prefix        = 'iron_bcc'
+    outdir        = './out/'
+    pseudo_dir    = '../pseudo/'
+/
+
+&SYSTEM
+    ibrav         = 3
+    celldm(1)     = 5.42
+    nat           = 1
+    ntyp          = 1
+    ecutwfc       = 60.0
+    ecutrho       = 480.0
+    occupations   = 'smearing'
+    smearing      = 'methfessel-paxton'
+    degauss       = 0.02
+    ! Ferromagnetic system: enable spin polarization
+    nspin         = 2
+    starting_magnetization(1) = 0.7
+/
+
+&ELECTRONS
+    mixing_beta   = 0.7
+    conv_thr      = 1.0e-8
+/
+
+&IONS
+    ion_dynamics  = 'bfgs'
+/
+
+&CELL
+    cell_dynamics = 'bfgs'
+/
+
+ATOMIC_SPECIES
+    Fe   55.845   Fe.pbe-spn-kjpaw_psl.0.2.1.UPF  ! <-- CORRECTED FILENAME
+
+ATOMIC_POSITIONS {crystal}
+    Fe   0.0   0.0   0.0
+
+K_POINTS {automatic}
+    8 8 8   0 0 0
